@@ -1,12 +1,25 @@
 <div class="topnav">
         <div id="top"></div>
         <div class="search-container">           
-            <form action="search_formula.php" method="post">
-                <img src="image&logo/logo.png" href="index.php" id="logo">
-                <input type="text" placeholder="tìm kiếm công thức" name="search">
-                <button type="submit" name="find"><i class="fa fa-search"></i></button>
+            <form action="searchchitiet.php" method="post">
+                <img src="image&logo/logo.png" id="logo">
+                <input type="text" placeholder="tìm kiếm công thức" id="txtSearch" name="search">
+                <button type="submit" id="btnSearch" name="find"><i class="fa fa-search"></i></button>
             </form>
         </div>
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/my.js"></script>
+        <script>
+            //$(document).ready(function()){
+            //    $("#btnSearch").click(function(){
+            //        var keyword = $('#txtSearch').val();
+            //        $.post("timkiem.php",{tukhoa:keyword},function(data){
+            //            $('#dataSearch').html(data);
+            //        })
+            //    })
+            //}
+        </script>
         <?php 
             // core configuration
             include_once "config/core.php";
@@ -14,8 +27,7 @@
             include_once "login_checker.php";
             // default to false
             $access_denied=false;
-        ?>    
-        <?php
+
             // check if users / customer was logged in
             // if user was logged in, show "Edit Profile", "Orders" and "Logout" options
             if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true && $_SESSION['access_level']=='Customer'){
@@ -24,7 +36,7 @@
             <?php echo $_SESSION['firstname']; ?>
         </a>
         <?php
-            }       
+            }        
             // if user was not logged in, show the "login" and "register" options
             else{
         ?>

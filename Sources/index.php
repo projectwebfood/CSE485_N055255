@@ -1,22 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="libs/css/style.css">
-    <link href="<?php echo $home_url . "libs/css/customer.css" ?>" rel="stylesheet" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="css/bootstrap.min.css"></script>
-    <title>Cooking</title>
-</head>
-<body>
+<?php 
+    // core configuration
+    include_once "config/core.php";
+    //$require_login=false;
+    //include_once "login_checker.php";
+    // default to false
+    $access_denied=false;  
 
+    //include_once "controller/c_congthuc.php";
+    //$c_congthuc = new C_congthuc();
+    //$noi_dung = $c_congthuc->index();
 
-    <?php include_once 'searchbar.php'; ?>
-    <?php include_once 'home_body.php'; ?>
-    <?php include_once 'home_foot.php'; ?>
+    //$menu = $noi_dung['menu'];
 
-</body>
-</html>
+    //print_r($menu);
+
+    include_once 'home_head.php';
+
+    include_once 'home_foot.php'; 
+?>

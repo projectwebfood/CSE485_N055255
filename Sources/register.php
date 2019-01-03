@@ -47,7 +47,7 @@ $user->contact_number=$_POST['contact_number'];
 $user->address=$_POST['address'];
 $user->password=$_POST['password'];
 $user->access_level='Customer';
-$user->status=0;
+$user->status=1; //fixed
 
 // access code for email verification
 $access_code=$utils->getToken();

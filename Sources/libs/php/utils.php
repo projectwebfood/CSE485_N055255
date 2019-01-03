@@ -35,7 +35,7 @@ public function sendEmailViaPhpMail($send_to_email, $subject, $body){
     $headers .= "From: {$from_name} <{$from_email}> \n";
  
     if(mail($send_to_email, $subject, $body, $headers)){
-        return true;
+        return true; 
     }else{
         return false;
     }

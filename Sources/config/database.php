@@ -1,13 +1,17 @@
 <?php
 // used to get mysql database connection
 class Database{
- 
+
     // specify your own database credentials
     private $host = "localhost";
-    private $db_name = "login_system";
+    private $db_name = "project";
     private $username = "root";
     private $password = "";
-    public $conn;
+    public $conn = NULL;
+
+    //public $_dbh = '';
+    //public $_sql = '';
+    //public $_cursor = NULL;
  
     // get the database connection
     public function getConnection(){
